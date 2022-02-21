@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-avatar slot="start">
+      <img src="https://cdn-icons.flaticon.com/png/512/4140/premium/4140051.png?token=exp=1645451558~hmac=313456839f56338743bce3efaea328a6" />
+    </ion-avatar>
+   <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon name="notifications"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-searchbar></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+  <ion-card *ngFor="let h of content">
+    <ion-card-header >
+      <ion-avatar>
+        <img [src]="h.avatar">
+      </ion-avatar>
+      <p></p>
+      <ion-card-subtitle>{{h.name}}</ion-card-subtitle>
+      <img  [src]="h.img">
+    </ion-card-header>
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, rem!
+    </ion-card-content>
+  </ion-card>
 </ion-content>

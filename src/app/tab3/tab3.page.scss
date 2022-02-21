@@ -1,0 +1,26 @@
+ion-header{
+    ion-toolbar, ion-item,ion-searchbar{
+        --background: #f1f5f8;
+        background: #f1f5f8;
+        padding: 0 10px;
+    }
+}
+
+ion-item{
+    h2{
+        font-weight: 700;
+        font-size: 14px;
+    }
+    p{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    icon-avatar{
+        --border-radius : 40%
+    }
+}
+
+ion-searchbar{
+    background-color: white;
+    color: #f1f5f8;
+}
