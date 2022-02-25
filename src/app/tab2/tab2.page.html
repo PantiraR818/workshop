@@ -1,17 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-avatar slot="start">
+        <img src="https://cdn-icons.flaticon.com/png/128/4140/premium/4140047.png?token=exp=1645507142~hmac=d5b899be537224efb4b891ef7eb9725a" />
+      </ion-avatar>
+     <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications"></ion-icon>
+        <ion-badge color="danger">99+</ion-badge>
+      </ion-button>
+    </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list>
+  <ion-item-sliding *ngFor="let n of news">    
+  <ion-item>
+    <ion-avatar slot="end">
+      <img [src]="n.img" />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{n.title}}</h2>
+      <ion-button color="tertiary">Request</ion-button>
+    </ion-label>
+    <ion-item-options side="end">
+      <ion-item-option color="success">Accept</ion-item-option>
+      <ion-item-option color="danger">Cancel</ion-item-option>
+    </ion-item-options>
+  </ion-item>
+</ion-item-sliding>
+</ion-list>
 </ion-content>
